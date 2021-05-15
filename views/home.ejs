@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs'); -%>
+<div class="container">
+  <h1>Home</h1>
+
+  <p><%= homeStartingContentPassed %></p>
+  <% passedPosts.forEach(function(posts){ %>
+  <h1><%= posts.userTitleInput %></h1>
+  <p>
+    <%= posts.userBodyInput.substring(0,100) + " ..." %>
+    <a href="http://localhost:3000/posts/<%=posts.userTitleInput%>"
+      >Read More</a
+    >
+  </p>
+
+  <p><% }) %></p>
+</div>
+
+<%- include('partials/footer.ejs'); -%>
